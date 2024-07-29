@@ -1,9 +1,9 @@
 {
-  "name": "website",
+  "name": "docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3000",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --max-warnings 0"
@@ -12,7 +12,11 @@
     "@repo/ui": "workspace:*",
     "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "@types/mdx": "^2.0.13",
+    "fumadocs-core": "^12.5.5",
+    "fumadocs-mdx": "^8.2.34",
+    "fumadocs-ui": "^12.5.5"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "14.2.4",

@@ -1,16 +1,7 @@
 import type { Config } from "tailwindcss";
 import tailwindcssAnimate from "tailwindcss-animate";
-
-const config = {
+export const sharedConfig  : Pick<Config, "darkMode", "theme", "plugins">= {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "../../packages/ui/src/**/*.{ts,tsx}",
-  ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -77,6 +68,18 @@ const config = {
     },
   },
   plugins: [tailwindcssAnimate],
+}
+
+const config = {
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "../../packages/ui/src/**/*.{ts,tsx}",
+  ],
+  ...sharedConfig,
+
 } satisfies Config;
 
 export default config;
