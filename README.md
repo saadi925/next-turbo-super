@@ -1,128 +1,63 @@
-# Turborepo starter with shadcn/ui
+# Turborepo Starter: Fuma Docs, Tailwind, Shadcn UI
 
-![Static Badge](https://img.shields.io/badge/shadcn%2Fui-0.8.0-blue?link=https%3A%2F%2Fgithub.com%2Fshadcn%2Fui)
-
-This is Turborepo starter with shadcn/ui pre-configured.
+This repository is a Turborepo starter configured with Shadcn UI and Fuma Docs, following best practices. 
 
 > [!NOTE]
-> This example uses `pnpm` as package manager.
+> This example uses `pnpm` as the package manager.
 
-[npm version](https://github.com/dan5py/turborepo-shadcn-ui/tree/npm)
-
-## Using this example
+## Getting Started
 
 Clone the repository:
 
 ```sh
-git clone https://github.com/dan5py/turborepo-shadcn-ui.git
+git clone https://github.com/saadi925/next-turbo-super
+
 ```
-
-Install dependencies:
-
-```sh
+```
 cd turborepo-shadcn-ui
 pnpm install
 ```
-
-### Add ui components
-
-Use the pre-made script:
-
-```sh
+## Adding UI Components
+Use the pre-made script to add UI components:
+```
 pnpm ui:add <component-name>
 ```
 
-> This works just like the add command in the `shadcn/ui` CLI.
+This works just like the add command in the shadcn/ui CLI.
 
-### Add a new app
+## Adding a New App
+Turborepo offers a simple command to add a new app:
 
-Turborepo offer a simple command to add a new app:
-
-```sh
+```
 pnpm turbo gen workspace --name <app-name>
 ```
+This will create a new empty app in the apps directory. To copy an existing app:
 
-This will create a new empty app in the `apps` directory.
-
-If you want, you can copy an existing app with:
-
-```sh
+```
 pnpm turbo gen workspace --name <app-name> --copy
 ```
 
-> [!NOTE]
-> Remember to run `pnpm install` after copying an app.
+[!NOTE]
+Remember to run pnpm install after copying an app.
 
-## What's inside?
-
+## What's Inside?
 This Turborepo includes the following packages/apps:
 
-### Apps and Packages
+## Apps
+- docs: a Next.js app (With [FumaDocs](https://fumadocs.vercel.app/docs/ui))
+- web: another Next.js app
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications (🚀 powered by **shadcn/ui**)
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+## Packages
+- @repo/ui: a shared React component library powered by shadcn/ui and tailwind css
+- @repo/eslint-config: ESLint configurations including eslint-config-next and eslint-config-prettier
+- @repo/typescript-config: Shared tsconfig.json files
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+# Utilities 
 
-### Utilities
+TypeScript for static type checking
+ESLint for code linting
+Prettier for code formatting
 
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```sh
-cd turborepo-shadcn-ui
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```sh
-cd turborepo-shadcn-ui
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd turborepo-shadcn-ui
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```sh
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
-
-Learn more about shadcn/ui:
-
-- [Documentation](https://ui.shadcn.com/docs)
+## Commands
+Build
+To build all apps and packages:

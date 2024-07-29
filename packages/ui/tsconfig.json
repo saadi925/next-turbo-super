@@ -6,6 +6,6 @@
       "@repo/ui/*": ["./src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "shared.config.ts"],
   "exclude": ["node_modules"]
 }

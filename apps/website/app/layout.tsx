@@ -1,7 +1,7 @@
 import "@repo/ui/globals.css";
-import NextThemeProvider from "@repo/ui/theme/ThemeProvider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Provider from "~/providers/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +17,10 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NextThemeProvider>
-        {children}
-        </NextThemeProvider>
+      <body className={`${inter.className} `}>
+   <Provider >
+    {children}
+   </Provider>
       </body>
     </html>
   );
