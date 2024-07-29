@@ -10,11 +10,11 @@ This repository is a Turborepo starter configured with Shadcn UI and Fuma Docs, 
 Clone the repository:
 
 ```sh
-git clone https://github.com/saadi925/next-turbo-super
+git clone https://github.com/saadi925/next-turbo-super.git
 
 ```
 ```
-cd turborepo-shadcn-ui
+cd next-turbo-super
 pnpm install
 ```
 ## Adding UI Components
@@ -47,6 +47,7 @@ This Turborepo includes the following packages/apps:
 - docs: a Next.js app (With [FumaDocs](https://fumadocs.vercel.app/docs/ui))
 - web: another Next.js app
 
+
 ## Packages
 - @repo/ui: a shared React component library powered by shadcn/ui and tailwind css
 - @repo/eslint-config: ESLint configurations including eslint-config-next and eslint-config-prettier
@@ -61,3 +62,16 @@ Prettier for code formatting
 ## Commands
 Build
 To build all apps and packages:
+
+
+## Tools (Additional From Docs):
+If you want to add any of these you can follow the links.
+
+Turborepo works with all of your favorite tooling. Below, you'll find guides for the most common tools being used with Turborepo.
+
+- [Docker](https://turbo.build/repo/docs/guides/tools/docker)
+- [Prisma](https://turbo.build/repo/docs/guides/tools/prisma)
+- [StoryBook](https://turbo.build/repo/docs/guides/tools/storybook)
+- [Vitest](https://turbo.build/repo/docs/guides/tools/vitest)
+- [Jest](https://turbo.build/repo/docs/guides/tools/jest)
+- [Biome](https://turbo.build/repo/docs/guides/tools/biome)
